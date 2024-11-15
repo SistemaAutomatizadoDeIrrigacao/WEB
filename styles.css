@@ -1,0 +1,74 @@
+/* Estilos gerais */
+.chart-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+}
+
+.slider-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho do slider */
+    box-sizing: border-box;
+}
+
+/* Estilos responsivos */
+
+/* Para telas pequenas */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 10px;
+    }
+
+    .slider-container {
+        margin: 10px auto;
+        max-width: 100%;
+    }
+}
+
+/* Para telas ainda menores (smartphones) */
+@media (max-width: 480px) {
+    .chart-container {
+        padding: 5px;
+    }
+
+    .slider-container {
+        margin: 5px auto;
+        max-width: 100%;
+    }
+}
+
+/* Para modo horizontal em dispositivos móveis */
+@media (orientation: landscape) and (max-width: 768px) {
+    .chart-container {
+        padding: 15px;
+    }
+
+    .slider-container {
+        max-width: 80%; /* Evita sliders muito grandes em paisagem */
+        margin: 15px auto;
+    }
+}
+
+/* Para garantir redimensionamento adequado */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}

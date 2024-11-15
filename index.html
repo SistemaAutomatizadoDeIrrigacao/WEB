@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Irrigação Automático</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Irrigação Automático</h1>
+    </header>
+
+    <!-- Menu Lateral de Personalização -->
+    <aside id="customizationMenu">
+        <button id="closeMenu">&times;</button>
+        <h2>Personalizar Página</h2>
+        <div class="customization-option">
+            <label for="fontSize">Tamanho da Fonte:</label>
+            <input type="range" id="fontSize" min="10" max="30" value="16">
+        </div>
+        <div class="customization-option">
+            <label for="fontColor">Cor da Fonte:</label>
+            <input type="color" id="fontColor" value="#333333">
+        </div>
+        <div class="customization-option">
+            <label for="cardColor">Cor dos Cards:</label>
+            <input type="color" id="cardColor" value="#ffffff">
+        </div>
+        <div class="customization-option">
+            <label for="cardSize">Tamanho dos Cards:</label>
+            <input type="range" id="cardSize" min="200" max="400" value="300">
+        </div>
+        <div class="customization-option">
+            <button id="applyPreset1">Aplicar Estilo 1</button>
+            <button id="applyPreset2">Aplicar Estilo 2</button>
+            <button id="applyPreset3">Gráficos Dados dos Sensores</button>
+        </div>
+    </aside>
+
+    <button id="openMenu" class="open-menu">&#9776; </button>
+
+    <main>
+        <section class="sensor-data">
+            <div class="card">
+                <i class="fas fa-thermometer-half"></i>
+                <p>Temperatura do Ar: <span id="airTemperature" class="data-text">--</span> °C</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tint"></i>
+                <p>Umidade do Ar: <span id="airHumidity" class="data-text">--</span> %</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-seedling"></i>
+                <p>Umidade do Solo: <span id="soilMoisture" class="data-text">--</span> %</p>
+            </div>
+        </section>
+
+        <section id="thresholdControls" class="controls">
+            <div id="pumpStatus" class="card">
+                <p>Status da Bomba: <span id="pumpStatusValue">--</span></p>
+                <button id="togglePump"><i class="fas fa-power-off"></i> Ligar/Desligar Bomba</button>
+            </div>
+            <div id="ledStatus" class="card">
+                <p>Status do LED: <span id="ledStatusValue">--</span></p>
+                <button id="toggleLED"><i class="fas fa-lightbulb"></i> Ligar/Desligar LED</button>
+            </div>
+            <div class="card">
+                <p>Limiar para Ligar a Bomba: <span id="thresholdOnDisplay">30.0</span>%</p>
+                <input type="range" id="thresholdOn" min="0" max="100" step="0.1" value="30.0">
+                <p>Limiar para Desligar a Bomba: <span id="thresholdOffDisplay">50.0</span>%</p>
+                <input type="range" id="thresholdOff" min="0" max="100" step="0.1" value="50.0">
+            </div>
+        </section>
+
+        <section class="card">
+            <p>Última Verificação: <span id="lastCheckTime">--</span></p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

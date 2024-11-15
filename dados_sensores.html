@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dados dos Sensores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Dados dos Sensores</h1>
+        <a href="index.html" class="link-botao">Voltar</a>
+    </header>
+    <div class="slider-container">
+        <label for="timeRange">Intervalo de Tempo:</label>
+        <input type="range" id="timeRange" min="0" max="18" step="1" value="0">
+        <span id="timeRangeValue">1h</span>
+    </div>
+    <div class="chart-container">
+        <canvas id="tempChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="humidityChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="soilMoistureChart"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

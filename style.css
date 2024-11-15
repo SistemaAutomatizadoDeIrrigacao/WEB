@@ -1,0 +1,164 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sensor-data, .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
+/* Estilos para o Menu Lateral de Personalização */
+#customizationMenu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+#customizationMenu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.customization-option {
+    margin: 15px;
+}
+
+.customization-option label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#customizationMenu input[type="range"], 
+#customizationMenu input[type="color"] {
+    width: 100%;
+}
+
+#customizationMenu button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#customizationMenu button:hover {
+    background-color: #45a049;
+}
+
+.open-menu {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+#customizationMenu.open {
+    left: 0;
+}
+
+
+section canvas {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.link-botao {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.link-botao:hover {
+    background-color: #45a049;
+}
+
